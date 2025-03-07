@@ -1,0 +1,12 @@
+appId: com.viscouspot.gitsync
+---
+
+- runFlow: ../assert.yaml
+- runFlow:
+    when: 
+      notVisible: "HTTP/S"
+    commands:
+      - tapOn: 
+          id: "gitProviderSpinner"
+      - assertVisible: "HTTP/S"
+      - tapOn: "HTTP/S"

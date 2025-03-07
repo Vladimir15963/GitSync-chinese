@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.GitSync" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:textColorPrimary">@color/text_primary</item>
+
+<!--        <item name="android:actionBarStyle">@style/ThemeActionBar</item>-->
+<!--        <item name="android:windowActionBarOverlay">true</item>-->
+<!--        <item name="actionBarStyle">@style/ThemeActionBar</item>-->
+        <item name="windowActionBarOverlay">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+<!--    <style name="ThemeActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid">-->
+<!--        <item name="android:background">@color/app_bg</item>-->
+<!--        <item name="background">@color/app_bg</item>-->
+<!--        <item name="android:windowContentOverlay">@null</item>-->
+<!--        <item name="elevation">0dp</item>-->
+<!--    </style>-->
+
+    <style name="AlertDialogMinTheme" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="buttonIconDimen">20dp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">87%</item>
+        <item name="android:windowMinWidthMinor">87%</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+
+    </style>
+
+    <style name="NeutralButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/auth_green</item>
+    </style>
+
+    <style name="Switch" parent="@android:style/Widget.Material.Light.CompoundButton.Switch">
+        <item name="android:track">@drawable/track_material</item>
+        <item name="android:thumb">@drawable/thumb_material</item>
+        <item name="android:switchPadding">16dp</item>
+    </style>
+
+    <style name="DropdownSwitch" parent="@android:style/Widget.Material.Light.CompoundButton.Switch">
+        <item name="android:thumb">@color/transparent</item>
+        <item name="android:track">@color/transparent</item> <!-- Remove the default track -->
+    </style>
+
+    <style name="SingleLineEditText" parent="@android:style/Widget.Material.Light.EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+
+    <style name="ApplicationSelectButton" parent="ThemeOverlay.Material3.Button">
+        <item name="android:textColor">@color/primary_light</item>
+        <item name="iconTint">@color/primary_light</item>
+    </style>
+</resources>

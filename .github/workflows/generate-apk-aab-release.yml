@@ -1,0 +1,124 @@
+name: Generated APK AAB (Upload - Create Artifact To Github Action)
+
+on:
+  push:
+    tags:
+      - v*
+
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Create Secrets file
+        run: |
+          echo "Creating file with interpolated secrets"
+          cat <<EOF > ./app/src/main/java/com/viscouspot/gitsync/Secrets.kt
+          ${{ secrets.SECRETS }}
+          EOF
+        
+      - name: Set Up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+        
+      - name: Build Release APKs
+        run: |
+          bash ./gradlew assembleRelease
+
+      - name: Build Release Bundles
+        run: |
+          bash ./gradlew bundleRelease
+
+      - name: Move files
+        run: |
+          mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/app-release.apk
+          mv app/build/outputs/bundle/release/app-release.aab app/build/outputs/app-release.aab
+          
+      - name: Sign App
+        id: sign_app
+        uses: ilharp/sign-android-release@v1
+        with:
+          releaseDir: app/build/outputs
+          signingKey: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+          keyAlias: ${{ secrets.RELEASE_SIGNING_ALIAS }}
+          keyStorePassword: ${{ secrets.RELEASE_SIGNING_PASSWORD }}
+          keyPassword: ${{ secrets.RELEASE_SIGNING_PASSWORD }}
+          buildToolsVersion: 34.0.0
+
+      
+      - name: Split
+        uses: jungwinter/split@v2
+        id: signed_files
+        with:
+          msg: ${{ steps.sign_app.outputs.signedFiles }}
+          separator: ':'
+
+      - name: Upload Release Build to Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-artifacts
+          path: |
+            ${{ steps.signed_files.outputs._1 }}
+
+
+      - name: Build Changelog
+        id: changelog
+        uses: ardalanamini/auto-changelog@v3
+        with:
+          mention-authors: false
+          mention-new-contributors: false
+          include-compare: false
+          semver: false
+
+      - name: Find and Replace
+        uses: mad9000/actions-find-and-replace-string@5
+        id: signed_file_path_0
+        with:
+            source: ${{ steps.signed_files.outputs._0 }} 
+            find: '/github/workspace/' 
+            replace: ''   
+          
+      - name: Find and Replace
+        uses: mad9000/actions-find-and-replace-string@5
+        id: signed_file_path_1
+        with:
+            source: ${{ steps.signed_files.outputs._1 }} 
+            find: '/github/workspace/' 
+            replace: ''   
+            
+      - name: Create Release
+        id: create_release
+        uses: ncipollo/release-action@v1.13.0
+        with:
+          artifacts: "${{ steps.signed_file_path_1.outputs.value }}"
+          body: ${{ steps.changelog.outputs.changelog }}
+          draft: true
+          name: Release ${{ github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+     
+
+      - name: Create Playstore Release
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          packageName: com.viscouspot.gitsync
+          releaseName: ${{ github.ref_name }}
+          releaseFiles: ${{ steps.signed_file_path_0.outputs.value }}
+          track: internal
+          status: draft

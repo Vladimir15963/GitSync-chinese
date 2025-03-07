@@ -1,0 +1,17 @@
+appId: com.viscouspot.gitsync
+---
+
+- runFlow: ./assert.yaml
+- tapOn: "Documents"
+- tapOn:
+    point: 65%,5%
+- evalScript: ${output.randomNumber = (Math.floor(Math.random() * 10000) + 1).toString()}
+- inputText: ${output.randomNumber}
+- assertVisible: "OK"
+- tapOn: "OK"
+- assertVisible: ${output.randomNumber}
+- tapOn: ${output.randomNumber}
+- assertVisible: "USE THIS FOLDER"
+- tapOn: "USE THIS FOLDER"
+- assertVisible: "ALLOW"
+- tapOn: "ALLOW"

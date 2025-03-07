@@ -29,9 +29,10 @@
 
 </div>
 # 全体目光向我看齐！
-咳咳，赖的写自述文件了，随便写几句，这是利用原项目中的string.xml文件制作的中文翻译，[修改后的文件](https://github.com/Vladimir15963/GitSync-chinese/blob/master/app/src/main/res/values/strings.xml)
+咳咳，赖的写自述文件了，随便写几句，这是利用原项目中的string.xml文件制作的中文翻译，
+[修改后的文件](https://github.com/Vladimir15963/GitSync-chinese/blob/master/app/src/main/res/values/strings.xml)
 
-![Screenshot_2025-03-07-23-08-56-91_047f3329a19d9d0](https://github.com/user-attachments/assets/dca555d6-d80c-4407-8e1e-36e2508b8375)
+![IMG_20250308_033936](https://github.com/user-attachments/assets/646659b5-738f-4aa6-a455-a7eb76f24c4c)
 
 
 GitSync is an Android git client that aims to simplify the process of syncing a folder between a git remote and a local directory. It works in the background to keep your files synced with a simple one-time setup and numerous options for activating manual syncs

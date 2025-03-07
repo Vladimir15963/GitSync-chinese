@@ -11,8 +11,8 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1400,
-      "versionName": "1.400",
+      "versionCode": 1711,
+      "versionName": "1.711cn",
       "outputFile": "app-release.apk"
     }
   ],
@@ -33,5 +33,5 @@
       ]
     }
   ],
-  "minSdkVersionForDexing": 29
+  "minSdkVersionForDexing": 21
 }

@@ -6,14 +6,13 @@ plugins {
 android {
     namespace = "com.viscouspot.gitsync"
     compileSdk = 34
-    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "com.viscouspot.gitsync"
         minSdk = 21
         targetSdk = 34
-        versionCode = 1710
-        versionName  = "1.710"
+        versionCode = 1711
+        versionName  = "1.711cn"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Git Sync</string>
+    <string name="app_name">Git 同步</string>
 
     <!--    Common-->
-    <string name="dismiss">Dismiss</string>
-    <string name="skip">Skip</string>
-    <string name="done">Done</string>
-    <string name="confirm">Confirm</string>
+    <string name="dismiss">取消</string>
+    <string name="skip">跳过</string>
+    <string name="done">完成</string>
+    <string name="confirm">确认</string>
 
     <!--    Paths-->
     <string name="gitignore_path">.gitignore</string>
@@ -17,224 +17,223 @@
     <string name="git_info_exclude_path">.git/info/exclude</string>
 
     <!--    Toast Messages-->
-    <string name="sync_start_pull">Syncing changes…</string>
-    <string name="sync_start_push">Syncing local changes…</string>
-    <string name="sync_not_required">Sync not required!</string>
-    <string name="sync_complete">Sync complete!</string>
+    <string name="sync_start_pull">正在同步修改…</string>
+    <string name="sync_start_push">正在同步本地修改上传至仓库…</string>
+    <string name="sync_not_required">你现在是最新的！现在不需要同步！</string>
+    <string name="sync_complete">提交修改中...!</string>
 
-    <string name="enable_accessibility_service">Please enable Git Sync under "Installed apps"</string>
-    <string name="network_unavailable">Network unavailable!\nGitSync will retry when reconnected</string>
-    <string name="network_unavailable_retry">Network unavailable!\nGitSync will retry when reconnected</string>
-    <string name="pull_failed">Pull failed! Please check for uncommitted changes and try again.</string>
+    <string name="enable_accessibility_service">请在「已安装应用」中启用 Git 同步</string>
+    <string name="network_unavailable">网络不可用！\n重新连接后将自动重试</string>
+    <string name="network_unavailable_retry">网络不可用！\n重新连接后将自动重试</string>
+    <string name="pull_failed">拉取失败！请检查未提交的变更后重试。</string>
 
     <!--    Bug Notification-->
-    <string name="report_a_bug">Report a Bug</string>
-    <string name="report_bug">&lt;GitSync Error&gt; Tap to send a bug report</string>
-    <string name="unknown_error">Unknown Error</string>
-    <string name="enable_notifications">Enable notifications permission to see more.</string>
+    <string name="report_a_bug">发送bug报告</string>
+    <string name="report_bug">&lt;GitSync Error&gt; 点击发送错误报告</string>
+    <string name="unknown_error">未知错误＞︿＜</string>
+    <string name="enable_notifications">请授予通知权限以通知软件状态ヾ(≧▽≦*)o</string>
 
-    <string name="out_of_memory">Application ran out of memory!</string>
-    <string name="invalid_remote">Invalid remote! Modify this in settings</string>
-    <string name="large_file">Singular files larger than 50MB not supported!</string>
-    <string name="clone_failed">Failed to clone repository!</string>
-    <string name="inaccessible_directory_message">Inaccessible directory! Please select a different location.</string>
-    <string name="auto_rebase_failed_exception">Remote is further ahead than local and we could not automatically rebase for you, as it would cause non fast-forward update.</string>
-    <string name="non_existing_exception">Remote ref didn\'t exist.</string>
-    <string name="rejected_nodelete_exception">Remote ref update was rejected, because remote side doesn\'t support/allow deleting refs.</string>
-    <string name="rejected_exception">Remote ref update was rejected.</string>
-    <string name="rejection_with_reason_exception">Remote ref update was rejected because %s.</string>
-    <string name="remote_changed_exception">Remote ref update was rejected, because old object id on remote repository wasn\'t the same as defined expected old object.</string>
-    <string name="merging_exception_message">MERGING</string>
+    <string name="out_of_memory">应用程序可调配内存资源不足！</string>
+    <string name="invalid_remote">无效的仓库地址！请修改</string>
+    <string name="large_file">不支持大于50MB的单个文件同步哦！</string>
+    <string name="clone_failed">克隆仓库失败啦！</string>
+    <string name="inaccessible_directory_message">无法访问的目录！请选择其他</string>
+    <string name="auto_rebase_failed_exception">远程仓库比本地仓库更超前，无法自动变基，因为这会导致非快进更新。</string>
+    <string name="non_existing_exception">远程引用不存在。</string>
+    <string name="rejected_nodelete_exception">远程引用更新被拒绝，因为远程端不支持/不允许删除引用。</string>
+    <string name="rejected_exception">远程引用更新被拒绝。</string>
+    <string name="rejection_with_reason_exception">远程引用更新被拒绝，原因是%s。</string>
+    <string name="remote_changed_exception">远程引用更新被拒绝，因为远程仓库上的旧对象ID与预期的旧对象ID不一致。</string>
+    <string name="merging_exception_message">合并中</string>
 
 
     <!--    Home Screen-->
-    <string name="repo_not_found">No commits found…</string>
+    <string name="repo_not_found">提交记录未找到...</string>
 
-    <string name="committed">committed</string>
-    <string name="additions">%s ++</string>
-    <string name="deletions" tools:ignore="TypographyDashes">%s --</string>
+    <string name="committed">已提交</string>
+    <string name="additions">%s 项新增</string>
+    <string name="deletions" tools:ignore="TypographyDashes">%s 项删除</string>
 
     <string name="auth">AUTH</string>
     <string name="git_dir_path_hint">/storage/emulated/0/…</string>
-    <string name="deselect_repository_directory">deselect repository directory</string>
-    <string name="select_repository_directory">select repository directory</string>
+    <string name="deselect_repository_directory">取消选择仓库目录</string>
+    <string name="select_repository_directory">选择本地仓库目录</string>
 
-    <string name="enable_application_observer">Auto Sync Settings</string>
-    <string name="application_not_set">Select App(s)</string>
-    <string name="select_application">Select application(s)</string>
-    <string name="multiple_application_selected">Selected (%s)</string>
-    <string name="save_application">Save</string>
-    <string name="sync_on_app_closed">Sync on app(s) closed</string>
-    <string name="sync_on_app_opened">Sync on app(s) opened</string>
+    <string name="enable_application_observer">自动同步设置</string>
+    <string name="application_not_set">选择应用</string>
+    <string name="select_application">选择应用</string>
+    <string name="multiple_application_selected">已选择 (%s)</string>
+    <string name="save_application">保存</string>
+    <string name="sync_on_app_closed">当应用关闭时同步仓库</string>
+    <string name="sync_on_app_opened">当应用打开时同步仓库</string>
 
     <!-- Multi Repo -->
-    <string name="default_container_name">alias</string>
+    <string name="default_container_name">本地仓库名</string>
 
-    <string name="rename">Rename</string>
-    <string name="rename_container">Rename Container</string>
-    <string name="rename_container_msg">Enter a new name for the container</string>
+    <string name="rename">重命名</string>
+    <string name="rename_container">重命名本地仓库</string>
+    <string name="rename_container_msg">为仓库输入新名称</string>
 
-    <string name="add">Add</string>
-    <string name="add_container">Add Container</string>
-    <string name="add_container_msg">Give your new container a unique name! This alias will help you easily identify it later.</string>
+    <string name="add">添加</string>
+    <string name="add_container">添加新的本地仓库</string>
+    <string name="add_container_msg">为你的新仓库输入一个名称！这个别名将帮助你有很多仓库时识别你的仓库。</string>
 
-    <string name="confirm_container_delete">Confirm Container Deletion</string>
-    <string name="confirm_container_delete_msg">Are you sure you want to delete the container \"%1$s\"? \n\nThis action cannot be undone.</string>
+    <string name="confirm_container_delete">确认删除</string>
+    <string name="confirm_container_delete_msg">你确定要删除该仓库的本地配置 \"%1$s\" 吗？\n\n此操作无法撤销。</string>
 
-    <!--    Clone Screen-->
-    <string name="clone_repo">Clone remote repository</string>
+    <!--    克隆屏幕-->
+    <string name="clone_repo">克隆git仓库</string>
 
-    <string name="pull">pull</string>
+    <string name="pull">拉取</string>
     <string name="git_repo_url_hint">https://git.abc/xyz.git</string>
-    <string name="invalid_repository_url">Invalid repository URL!</string>
-    <string name="clone_anyway">Clone anyway</string>
-    <string name="i_have_a_local_repository">I have a local repository</string>
+    <string name="invalid_repository_url">无效的仓库URL！</string>
+    <string name="clone_anyway">无视风险，坚持克隆！</string>
+    <string name="i_have_a_local_repository">我有一个本地仓库</string>
 
-    <string name="cloning_repository">Cloning repository…</string>
-    <string name="clone_message">DON\'T EXIT THIS SCREEN\nThis may take a while depending on the size of your repo\n\n</string>
+    <string name="cloning_repository">正在克隆仓库…</string>
+    <string name="clone_message">请勿离开此页面\n克隆时间取决于仓库大小\n\n</string>
 
-    <string name="clone_repo_title">Select a repository</string>
-    <string name="select_clone_directory">Select a folder to clone into</string>
-    <string name="repository_not_found">Repository not found!</string>
+    <string name="clone_repo_title">选择一个仓库</string>
+    <string name="select_clone_directory">选择下载到的本地目录</string>
+    <string name="repository_not_found">未找到仓库！</string>
 
 
-    <!--    Sync Dialogs-->
-    <string name="sync_now">Sync Changes</string>
-    <string name="pull_changes">Pull Changes</string>
+    <!--    同步对话框 -->
+    <string name="sync_now">立即同步</string>
+    <string name="pull_changes">拉取变更</string>
 
-    <string name="force_push">Force Push</string>
-    <string name="force_pushing">Force pushing…</string>
-    <string name="confirm_force_push">Confirm Force Push</string>
-    <string name="confirm_force_push_msg">Are you sure you want to force push these changes? \n\nThis action will overwrite the remote history and cannot be undone.</string>
+    <string name="force_push">强制推送</string>
+    <string name="force_pushing">正在强制推送…</string>
+    <string name="confirm_force_push">确认强制推送</string>
+    <string name="confirm_force_push_msg">你确定要强制推送这些更改吗？\n\n此操作将覆盖远程历史记录，无法撤销。</string>
 
-    <string name="force_pull">Force Pull</string>
-    <string name="force_pulling">Force pulling…</string>
-    <string name="confirm_force_pull">Confirm Force Pull</string>
-    <string name="confirm_force_pull_msg">Are you sure you want to force pull these changes? \n\nThis action will overwrite the local history and cannot be undone.</string>
+    <string name="force_pull">强制拉取</string>
+    <string name="force_pulling">正在强制拉取…</string>
+    <string name="confirm_force_pull">确认强制拉取</string>
+    <string name="confirm_force_pull_msg">你确定要强制拉取这些更改吗？\n\n此操作将覆盖本地历史记录，无法撤销。</string>
 
-    <string name="force_push_pull_message">Please do not close or exit the app until the process is complete.</string>
+    <string name="force_push_pull_message">请勿在过程完成前关闭或退出应用。</string>
 
-    <string name="manual_sync">Manual Sync</string>
-    <string name="manual_sync_msg">Select the files you would like to sync</string>
-    <string name="no_uncommitted_changes">No uncommitted changes</string>
+    <string name="manual_sync">手动同步</string>
+    <string name="manual_sync_msg">选择你想要同步的文件</string>
+    <string name="no_uncommitted_changes">没有未提交的更改</string>
 
-    <string name="discard_changes_title">Discard Changes?</string>
-    <string name="discard_changes_msg">Are you sure you want to discard all changes to \"%s\"? \n\nThis action cannot be undone.</string>
-    <string name="discard_changes">Discard Changes</string>
+    <string name="discard_changes_title">放弃更改？</string>
+    <string name="discard_changes_msg">你确定要放弃对 \"%s\" 的所有更改吗？\n\n此操作无法撤销。</string>
+    <string name="discard_changes">放弃更改</string>
 
     <!--    Merge Conflict Dialog-->
-    <string name="merge_conflict_item_title">MERGE CONFLICT</string>
-    <string name="merge_conflict_item_message">There is a merge conflict! Tap to resolve</string>
+    <string name="merge_conflict_item_title">合并冲突</string>
+    <string name="merge_conflict_item_message">出现合并的冲突，请点击解决~</string>
 
-    <string name="merge_conflict">merge conflict</string>
-    <string name="merge_dialog_message">Use the editor to resolve the merge conflicts</string>
-    <string name="example_filepath">examplefile.md</string>
+    <string name="merge_conflict">合并冲突</string>
+    <string name="merge_dialog_message">使用编辑器解决合并冲突</string>
+    <string name="example_filepath">示例文件.md</string>
 
-    <string name="abort_merge">abort merge</string>
-    <string name="keep_changes">Keep changes</string>
-    <string name="local">local</string>
-    <string name="both">both</string>
-    <string name="remote">remote</string>
+    <string name="abort_merge">中止合并</string>
+    <string name="keep_changes">保留更改</string>
+    <string name="local">本地</string>
+    <string name="both">双方</string>
+    <string name="remote">远程</string>
 
-    <string name="merge">Merge</string>
-    <string name="merging">Merging…</string>
-    <string name="resolving_merge">Resolving merge…</string>
+    <string name="merge">合并</string>
+    <string name="merging">正在合并…</string>
+    <string name="resolving_merge">正在解决合并…</string>
 
     <string name="conflict_start"><![CDATA[<<<<<<<]]></string>
     <string name="conflict_separator">=======</string>
     <string name="conflict_end"><![CDATA[>>>>>>>]]></string>
 
     <!--    Settings Dialog-->
-    <string name="settings">Settings</string>
+    <string name="settings">配置仓库</string>
 
-    <string name="sync_message_label">Sync Message</string>
-    <string name="sync_message_description">use %s for the date and time</string>
-    <string name="sync_message">Last Sync: %s (Mobile)</string>
+    <string name="sync_message_label">同步消息</string>
+    <string name="sync_message_description">使用 %s 表示日期和时间</string>
+    <string name="sync_message">提交：%s (移动设备)</string>
 
-    <string name="remote_label">default remote</string>
+    <string name="remote_label">默认远程仓库</string>
     <string name="default_remote">origin</string>
 
-    <string name="author_name_label">author name</string>
-    <string name="author_name">JohnSmith12</string>
-    <string name="author_email_label">author email</string>
-    <string name="author_email">john12@smith.com</string>
+    <string name="author_name_label">提交者名称</string>
+    <string name="author_name">君の名字</string>
+    <string name="author_email_label">提交者邮箱</string>
+    <string name="author_email">君の电子邮箱@mail.com</string>
 
     <string name="gitignore">.GitIgnore</string>
-    <string name="gitignore_description">list files or folders to ignore on all devices</string>
+    <string name="gitignore_description">列出在所有设备上忽略的文件或文件夹</string>
     <string name="gitignore_hint">.trash/\n./…</string>
     <string name="git_info_exclude">Git/info/exclude</string>
-    <string name="git_info_exclude_description">list files or folders to ignore on this device</string>
+    <string name="git_info_exclude_description">列出本设备需忽略的文件/文件夹</string>
     <string name="git_info_exclude_hint">.trash/\n./…</string>
 
-    <string name="view_docs">View Documentation</string>
+    <string name="view_docs">查看文档</string>
     <string name="docs_link">https://github.com/ViscousPot/GitSync/blob/master/Documentation.md</string>
-    <string name="documentation_html_link"><![CDATA[<a href=\"%s\">DOCUMENTATION</a>]]></string>
+    <string name="documentation_html_link"><![CDATA[<a href=\"%s\">文档</a>]]></string>
 
-    <string name="support_now">Contribute!</string>
-    <string name="contribute_msg"><![CDATA[<b>Looks like you\'re a bit of a power user!</b><br/><br/>Your support can help keep the app running smoothly and evolving with a contribution as little as <b>$5</b> through GitHub Sponsors.]]></string>
-    <string name="contribute_title">Support Our Work</string>
-    <string name="support_promise">I have</string>
+    <string name="support_now">支持原作者</string>
+    <string name="contribute_msg"><![CDATA[<b>您似乎是高级用户！</b><br/><br/>你可以通过 GitHub Sponsors 赞助至少帮助原作者持续维护和改进应用。中文翻译由Vladimirti提供]]></string>
+    <string name="contribute_title">支持开发（跳转）</string>
+    <string name="support_promise">关闭</string>
     <string name="contribute_link"><![CDATA[https://github.com/sponsors/ViscousPot?sponsor=ViscousPot&frequency=one-time&amount=15]]></string>
 
     <!--    Auth Dialogs-->
-    <string name="select_your_git_provider_and_authenticate">Select your git provider and authenticate</string>
+    <string name="select_your_git_provider_and_authenticate">选择git服务并验证</string>
 
-    <string name="oauth">oauth</string>
+    <string name="oauth">OAuth</string>
 
-    <string name="ensure_token_scope">Ensure your token includes the \"repo\" scope for full functionality.</string>
-    <string name="user">user</string>
+    <string name="ensure_token_scope">确保你的令牌包含\"repo\"范围以获得完整功能。</string>
+    <string name="user">用户</string>
     <string name="example_user">JohnSmith12</string>
-    <string name="token">token</string>
+    <string name="token">令牌</string>
     <string name="example_token">ghp_1234abcd5678efgh</string>
-    <string name="login">login</string>
+    <string name="login">登录</string>
 
-    <string name="pub_key">pub key</string>
-    <string name="priv_key">priv key</string>
+    <string name="pub_key">公钥</string>
+    <string name="priv_key">私钥</string>
     <string name="ssh_pub_key_example">ssh-rsa AABBCCDDEEFF112233445566</string>
     <string name="ssh_priv_key_example">-----BEGIN RSA PRIVATE KEY----- AABBCCDDEEFF112233445566</string>
 
-    <string name="generate_key">generate key</string>
-    <string name="confirm_key_saved">confirm pub key saved</string>
-    <string name="copied_text">Copied text!</string>
+    <string name="generate_key">点击生成密钥</string>
+    <string name="confirm_key_saved">确认公钥已保存</string>
+    <string name="copied_text">已复制文本！</string>
 
-    <string name="confirm_priv_key_copy">Confirm Private Key Copy</string>
-    <string name="confirm_priv_key_copy_msg">Are you sure you want to copy your private key to the clipboard? \n\nAnyone with access to this key can control your account. Ensure you paste it only in secure locations and clear your clipboard afterward.</string>
-    <string name="understood">Understood</string>
+    <string name="confirm_priv_key_copy">确认复制私钥</string>
+    <string name="confirm_priv_key_copy_msg">你确定要将私钥复制到剪贴板吗？\n\n任何拥有此密钥的人都可以控制你的账户。请确保你只在安全的地方粘贴它，并在之后清除剪贴板。</string>
+    <string name="understood">明白了</string>
 
-    <string name="import_private_key">Import Private Key</string>
-    <string name="import_private_key_msg">Paste your private key below to use an existing account. \n\nMake sure you are pasting the key in a secure environment, as anyone with access to this key can control your account.</string>
-    <string name="import_key">import</string>
+    <string name="import_private_key">导入私钥</string>
+    <string name="import_private_key_msg">在下面粘贴你的私钥以使用现有账户。\n\n请确保你在安全的环境中粘贴密钥，因为任何拥有此密钥的人都可以控制你的账户。</string>
+    <string name="import_key">导入</string>
 
-    <!--    Auto Sync Dialogs-->
-    <string name="accessibility_service_disclosure_title">Accessibility Service Disclosure</string>
-    <string name="accessibility_service_disclosure_message">To enhance your experience,\nGitSync uses Android’s Accessibility Service to detect when apps are opened or closed.\n\nThis helps us provide tailored features without storing or sharing any data.\n\nᴘʟᴇᴀsᴇ ᴇɴᴀʙʟᴇ ɢɪᴛsʏɴᴄ ᴏɴ ᴛʜᴇ ɴᴇxᴛ sᴄʀᴇᴇɴ</string>
-    <string name="accessibility_service_description">To enhance your experience, GitSync uses Android’s Accessibility Service to detect when apps are opened or closed. This helps us provide tailored features without storing or sharing any data. \n\n Key Points: \n Purpose: We use this service solely to improve your app experience. \n Privacy: No data is stored or sent elsewhere. \n Control: You can disable these permissions at any time in your device settings.</string>
+    <!--    自动同步对话框 -->
+    <string name="accessibility_service_disclosure_title">无障碍服务声明</string>
+    <string name="accessibility_service_disclosure_message">为提升体验，\nGitSync 使用 Android 无障碍服务检测应用开关状态。\n\n此功能不会存储或共享任何数据。\n\n请在下一页面启用 Git 同步</string>
+    <string name="accessibility_service_description">为提升体验，GitSync 使用 Android 无障碍服务检测应用启动与关闭，此功能不会存储或共享任何数据。\n\n要点：\n目的：仅用于改善应用体验\n隐私：不会存储或传输数据\n控制：可随时在系统设置中关闭此权限</string>
 
-    <string name="search_hint">Search…</string>
+    <string name="search_hint">搜索…</string>
     <string name="lg_3_apps_selected_text">4+</string>
-    <string name="select">select</string>
+    <string name="select">选择</string>
 
+    <!--    引导对话框 -->
+    <string name="welcome">欢迎！q(≧▽≦q)</string>
+    <string name="welcome_message">\n检测到您是首次使用。\n\n是否要开始快速设置引导？\n</string>
+    <string name="welcome_positive">开始设置</string>
+    <string name="welcome_neutral">跳过</string>
+    <string name="welcome_negative">我非常熟悉如何使用</string>
 
-    <!--    Onboarding Dialogs-->
-    <string name="welcome">Welcome!</string>
-    <string name="welcome_message">\nIt looks like this is your first time here.\n\nWould you like to go through a quick setup to get started?\n</string>
-    <string name="welcome_positive">Let\'s go</string>
-    <string name="welcome_neutral">Skip</string>
-    <string name="welcome_negative">I\'m familiar</string>
+    <string name="notification_dialog_title">启用通知</string>
+    <string name="notification_dialog_message">\n请启用通知权限以获得最佳体验。\n\n应用使用通知进行\n  • 弹出同步消息（可选）\n  • 错误报告\n</string>
 
-    <string name="notification_dialog_title">Enable Notifications</string>
-    <string name="notification_dialog_message">\nPlease enable notification permissions for the best experience.\n\nThe app uses notifications for \n  • popup sync messages (optional)\n  • bug reports\n</string>
+    <string name="all_files_access_dialog_title">启用“所有文件访问”</string>
+    <string name="all_files_access_dialog_message">\n如果不授予“所有文件访问”权限，你将无法使用GitSync！请启用它以正常使用。\n\n应用使用“所有文件访问”来将你的仓库同步到设备上的选定目录。应用不会尝试访问选定目录外的任何文件。\n</string>
 
-    <string name="all_files_access_dialog_title">Enable \"All Files Access\"</string>
-    <string name="all_files_access_dialog_message">\nYou cannot use GitSync without granting \"All files access\" permissions! Please enable it for the best experience.\n\nThe app uses \"All files access\" for syncing your repository to the selected directory on the device. The app does not attempt to access any file outside the selected directory.\n</string>
+    <string name="almost_there_dialog_title">快完成了！</string>
+    <string name="almost_there_dialog_message">\n很快，我们将进行认证并将你的仓库克隆到你的设备上，准备进行同步。\n\n一旦设置完成，有几种方式可以触发同步：\n\n  • GitSync快速磁贴\n  • 应用内的“同步更改”按钮\n  • 自动同步\n  • 自定义意图（高级）\n</string>
 
-    <string name="almost_there_dialog_title">Almost there!</string>
-    <string name="almost_there_dialog_message">\nSoon, we\'ll authenticate and clone your repo to your device, preparing it for syncing.\n\nOnce that\'s set, there are several ways to trigger a sync:\n\n  • The GitSync quick tile\n  • The in-app \"Sync Changes\" button\n  • Auto Sync\n  • A custom intent (advanced)\n</string>
+    <string name="auth_dialog_title">Git 服务认证</string>
+    <string name="auth_dialog_message">请完成 Git 服务认证以克隆仓库！</string>
 
-    <string name="auth_dialog_title">Authenticate with a Git Provider</string>
-    <string name="auth_dialog_message">Please authenticate with your chosen git provider and continue on to clone your repo!</string>
-
-    <string name="enable_autosync_title">Enable Auto Sync</string>
-    <string name="enable_autosync_message">Keep your data up-to-date effortlessly. Turn on Auto Sync to automatically sync in the background whenever apps are opened or closed.</string>
+    <string name="enable_autosync_title">启用自动同步</string>
+    <string name="enable_autosync_message">保持你的数据最新。开启自动同步可以在选定应用打开或关闭时自动在后台同步。</string>
 
 </resources>
